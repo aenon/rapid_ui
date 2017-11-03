@@ -1,0 +1,45 @@
+{
+  "name": "rapid",
+  "version": "1.0.0",
+  "description": "rapid ui",
+  "keywords": [
+    "docker",
+    "react",
+    "ui"
+  ],
+  "author": "Hakan Ozler",
+  "contributors": [
+    {
+      "name": "Goksel Pirnal"
+    }
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "brace": "^0.10.0",
+    "font-awesome": "^4.7.0",
+    "react": "^15.5.4",
+    "react-ace": "^4.1.6",
+    "react-bootstrap": "^0.31.0",
+    "react-dom": "^15.5.4",
+    "react-fontawesome": "^1.5.0",
+    "react-split-pane": "^0.1.57",
+    "react-treebeard": "^1.1.4",
+    "whatwg-fetch": "^2.0.2"
+  },
+  "devDependencies": {
+    "react-scripts": "1.0.7"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "clear": "rm -rf ../src/main/webapp/*",
+    "move": "mv -v ./build/* ../src/main/webapp/",
+    "build": "react-scripts build && npm run clear && npm run move",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "docker": "npm run build && npm run docker:run",
+    "docker:run": "cd .. && docker run --rm -v ~/.m2:/root/.m2 -v $(PWD):/rapid -w /rapid -v /var/run/docker.sock:/var/run/docker.sock -p 8080:8080 maven:3-jdk-8 mvn jetty:run",
+    "mvn:test": "cd .. && mvn clean test",
+    "jetty": "cd .. && mvn clean jetty:run"
+  }
+}

@@ -1,0 +1,8 @@
+.idea
+target
+java.rapid.iml
+react/node_modules/
+react/dist/
+src/main/webapp/dist/
+rapid.iml
+src/main/webapp/**

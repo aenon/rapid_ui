@@ -1,0 +1,13 @@
+## Rapid Front-end
+
+## Development Mode
+
+----
+$ npm run start
+----
+
+## Prepare for Prod
+
+----
+$ npm run build
+----
