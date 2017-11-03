@@ -1,6 +1,6 @@
 # Rapid Front-end
 
-Forked from [ozlerhakan](https://github.com/ozlerhakan)/[rapid](https://github.com/ozlerhakan/rapid)
+Forked from [ozlerhakan](https://github.com/ozlerhakan)/[rapid](https://github.com/ozlerhakan/rapid).
 
 ## Serve for development
 
